@@ -1,3 +1,5 @@
+#include <cstddef>
+
 class string{
     // string(const char *str);
 public:
@@ -6,14 +8,14 @@ public:
     string(const char *str);
     string();
     ~string();
-    int length() const;
-    int find(const string& str);
+    inline size_t length() const;
+    size_t find(const string& str);
     void concat(const string& str);
-    bool isNull () const;
+    inline bool isNull () const;
     string operator+(const string& str);
-    string operator=(const string& str);
+    string& operator=(const string& str);
     bool operator==(const string& str);
 private:
+    size_t  len;
     char *p_data;
-    int len;
 };
