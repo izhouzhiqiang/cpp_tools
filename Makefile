@@ -5,3 +5,6 @@ all :
 
 clean :
 	rm -rf build
+
+test :
+	cd test && make

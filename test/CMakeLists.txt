@@ -20,6 +20,7 @@ add_custom_command(
   COMMAND echo "test output:"
   COMMAND echo "------------------------------"
   COMMAND $<TARGET_FILE:a.out>
+  COMMAND echo "\n"
   COMMAND echo "------------------------------"
   COMMENT "Running test as part of the build process"
 )
